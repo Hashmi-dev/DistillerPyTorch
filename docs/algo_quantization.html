@@ -1,216 +1,173 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Quantization - Neural Network Distiller</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  <link href="extra.css" rel="stylesheet">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Quantization";
-    var mkdocs_page_input_path = "algo_quantization.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Quantization - Neural Network Distiller</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Quantization";
+        var mkdocs_page_input_path = "algo_quantization.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="index.html" class="icon icon-home"> Neural Network Distiller</a>
-        <div role="search">
+          <a href="index.html" class="icon icon-home"> Neural Network Distiller
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="index.html">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="install.html">Installation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="usage.html">Usage</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="schedule.html">Compression Scheduling</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="prepare_model_quant.html">Preparing a Model for Quantization</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Compressing Models</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="pruning.html">Pruning</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="regularization.html">Regularization</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="quantization.html">Quantization</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="knowledge_distillation.html">Knowledge Distillation</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="schedule.html">Compression Scheduling</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="conditional_computation.html">Conditional Computation</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="prepare_model_quant.html">Preparing a Model for Quantization</a>
                 </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Algorithms</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="algo_pruning.html">Pruning</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="algo_quantization.html">Quantization</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#quantization-algorithms">Quantization Algorithms</a></li>
-    
+              </ul>
+              <p class="caption"><span class="caption-text">Compressing Models</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="pruning.html">Pruning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="regularization.html">Regularization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="quantization.html">Quantization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="knowledge_distillation.html">Knowledge Distillation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="conditional_computation.html">Conditional Computation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithms</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="algo_pruning.html">Pruning</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Quantization</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#range-based-linear-quantization">Range-Based Linear Quantization</a>
         <ul>
-        
-            <li><a class="toctree-l4" href="#range-based-linear-quantization">Range-Based Linear Quantization</a></li>
-        
-            <li><a class="toctree-l4" href="#dorefa">DoReFa</a></li>
-        
-            <li><a class="toctree-l4" href="#pact">PACT</a></li>
-        
-            <li><a class="toctree-l4" href="#wrpn">WRPN</a></li>
-        
+    <li class="toctree-l3"><a class="reference internal" href="#asymmetric-vs-symmetric">Asymmetric vs. Symmetric</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#asymmetric-mode">Asymmetric Mode</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#symmetric-mode">Symmetric Mode</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#comparing-the-two-modes">Comparing the Two Modes</a>
+    </li>
         </ul>
-    
-
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="algo_earlyexit.html">Early Exit</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="model_zoo.html">Model Zoo</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="jupyter.html">Jupyter Notebooks</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="design.html">Design</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Tutorials</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="tutorial-struct_pruning.html">Pruning Filters and Channels</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="tutorial-lang_model.html">Pruning a Language Model</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="tutorial-lang_model_quant.html">Quantizing a Language Model</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="tutorial-gnmt_quant.html">Quantizing GNMT</a>
-                </li>
-    </ul>
-	    </li>
-          
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#other-features">Other Features</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation-in-distiller">Implementation in Distiller</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#post-training">Post-Training</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#quantization-aware-training">Quantization-Aware Training</a>
+    </li>
         </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dorefa">DoReFa</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pact">PACT</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#wrpn">WRPN</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#notes_1">Notes</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="algo_earlyexit.html">Early Exit</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="model_zoo.html">Model Zoo</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter Notebooks</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="design.html">Design</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="tutorial-struct_pruning.html">Pruning Filters and Channels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tutorial-lang_model.html">Pruning a Language Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tutorial-lang_model_quant.html">Quantizing a Language Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tutorial-gnmt_quant.html">Quantizing GNMT</a>
+                  </li>
+              </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Neural Network Distiller</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Neural Network Distiller</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-    
-      
-        
-          <li>Algorithms &raquo;</li>
-        
-      
-    
-    <li>Quantization</li>
+    <li><a href="index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Algorithms</li>
+      <li class="breadcrumb-item active">Quantization</li>
     <li class="wy-breadcrumbs-aside">
-      
     </li>
   </ul>
   <hr/>
 </div>
-          <div role="main">
-            <div class="section">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
                 <h1 id="quantization-algorithms">Quantization Algorithms</h1>
 <p><strong>Note:</strong><br />
@@ -315,22 +272,20 @@ For any of the methods below that require quantization-aware training, please se
 <h3 id="other-features">Other Features</h3>
 <ul>
 <li><strong>Scale factor scope:</strong> For weight tensors, Distiller supports per-channel quantization (per output channel).</li>
-<li>
-<p><strong>Removing outliers (post-training only):</strong> As discussed <a href="quantization.html#outliers-removal">here</a>, in some cases the float range of activations contains outliers. Spending dynamic range on these outliers hurts our ability to represent the values we actually care about accurately.
-   <p align="center">
+<li><strong>Removing outliers (post-training only):</strong> As discussed <a href="quantization.html#outliers-removal">here</a>, in some cases the float range of activations contains outliers. Spending dynamic range on these outliers hurts our ability to represent the values we actually care about accurately.
+ <br />
+<p align="center">
        <img src="imgs/quant_clipped.png"/>
-   </p>
-  Currently, Distiller supports clipping of activations during post-training quantization using the following methods:</p>
-<ul>
-<li>Averaging: Global min/max values are replaced with an average of the min/max values of each sample in the batch.</li>
-<li>Mean +/- N*Std: Take N standard deviations for the tensor's mean, and in any case don't exceed the tensor's actual min/max. N is user configurable.</li>
-<li>ACIQ - Analytical calculation of clipping values assuming either a Gaussian or Laplace distribution. As proposed in <a href="https://arxiv.org/abs/1810.05723">Post training 4-bit quantization of convolutional
-networks for rapid-deployment</a>.</li>
+   </p></li>
 </ul>
-</li>
-<li>
-<p><strong>Scale factor approximation (post-training only):</strong> This can be enabled optionally, to simulate an execution pipeline with no floating-point operations. Instead of multiplying with a floating-point scale factor, we multiply with an integer and then do a bit-wise shift: <script type="math/tex">Q \approx {A}/{2^n}</script>, where <script type="math/tex">Q</script> denotes the FP32 scale factor, <script type="math/tex">A</script> denotes the integer multiplier and <script type="math/tex">n</script> denotes the number of bits by which we shift after multiplication. The number of bits assigned to <script type="math/tex">A</script> is usually a parameter of the HW, and in Distiller it is configured by the user. Let us denote that with <script type="math/tex">m</script>. Given <script type="math/tex">Q</script> and <script type="math/tex">m</script>, we determine <script type="math/tex">A</script> and <script type="math/tex">n</script> as follows:</p>
-</li>
+<p>Currently, Distiller supports clipping of activations during post-training quantization using the following methods:</p>
+<pre><code>- Averaging: Global min/max values are replaced with an average of the min/max values of each sample in the batch.
+- Mean +/- N*Std: Take N standard deviations for the tensor's mean, and in any case don't exceed the tensor's actual min/max. N is user configurable.
+- ACIQ - Analytical calculation of clipping values assuming either a Gaussian or Laplace distribution. As proposed in [Post training 4-bit quantization of convolutional
+</code></pre>
+<p>networks for rapid-deployment](https://arxiv.org/abs/1810.05723).</p>
+<ul>
+<li><strong>Scale factor approximation (post-training only):</strong> This can be enabled optionally, to simulate an execution pipeline with no floating-point operations. Instead of multiplying with a floating-point scale factor, we multiply with an integer and then do a bit-wise shift: <script type="math/tex">Q \approx {A}/{2^n}</script>, where <script type="math/tex">Q</script> denotes the FP32 scale factor, <script type="math/tex">A</script> denotes the integer multiplier and <script type="math/tex">n</script> denotes the number of bits by which we shift after multiplication. The number of bits assigned to <script type="math/tex">A</script> is usually a parameter of the HW, and in Distiller it is configured by the user. Let us denote that with <script type="math/tex">m</script>. Given <script type="math/tex">Q</script> and <script type="math/tex">m</script>, we determine <script type="math/tex">A</script> and <script type="math/tex">n</script> as follows:</li>
 </ul>
 <p>
 <script type="math/tex; mode=display">Q \approx \frac{A}{2^n} \Rightarrow A \approx 2^nQ \Rightarrow</script>
@@ -410,29 +365,21 @@ Note that the current implementation of <code>QuantAwareTrainRangeLinearQuantize
 </ul>
               
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="algo_pruning.html" class="btn btn-neutral float-left" title="Pruning"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="algo_earlyexit.html" class="btn btn-neutral float-right" title="Early Exit">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="algo_pruning.html" class="btn btn-neutral" title="Pruning"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+          
         </div>
       </div>
 
@@ -440,21 +387,28 @@ Note that the current implementation of <code>QuantAwareTrainRangeLinearQuantize
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="algo_pruning.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="algo_earlyexit.html" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="algo_pruning.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="algo_earlyexit.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
-    <script>var base_url = '.';</script>
-    <script src="js/theme.js" defer></script>
-      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
-      <script src="search/main.js" defer></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
 
 </body>
 </html>

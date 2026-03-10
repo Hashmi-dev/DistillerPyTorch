@@ -1,0 +1,21 @@
+version: 1
+
+# Pruning configuration
+pruning:
+  policy: magnitude
+  sparsity_levels: [0.1, 0.3, 0.5, 0.7]
+  schedule: gradual
+
+# Quantization configuration  
+quantization:
+  bits:
+    weights: 8
+    activations: 8
+  method: linear
+
+# Knowledge distillation
+knowledge_distillation:
+  teacher_model: resnet50
+  student_model: resnet18
+  temperature: 4.0
+  alpha: 0.3

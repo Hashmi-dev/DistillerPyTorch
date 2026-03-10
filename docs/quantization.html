@@ -1,220 +1,155 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Quantization - Neural Network Distiller</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  <link href="extra.css" rel="stylesheet">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Quantization";
-    var mkdocs_page_input_path = "quantization.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Quantization - Neural Network Distiller</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Quantization";
+        var mkdocs_page_input_path = "quantization.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="index.html" class="icon icon-home"> Neural Network Distiller</a>
-        <div role="search">
+          <a href="index.html" class="icon icon-home"> Neural Network Distiller
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="index.html">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="install.html">Installation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="usage.html">Usage</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="schedule.html">Compression Scheduling</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="prepare_model_quant.html">Preparing a Model for Quantization</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Compressing Models</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="pruning.html">Pruning</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="regularization.html">Regularization</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a>
                 </li>
-                <li class=" current">
-                    
-    <a class="current" href="quantization.html">Quantization</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#quantization">Quantization</a></li>
-    
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="schedule.html">Compression Scheduling</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="prepare_model_quant.html">Preparing a Model for Quantization</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Compressing Models</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="pruning.html">Pruning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="regularization.html">Regularization</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Quantization</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#motivation-overall-efficiency">Motivation: Overall Efficiency</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#integer-vs-fp32">Integer vs. FP32</a>
         <ul>
-        
-            <li><a class="toctree-l4" href="#motivation-overall-efficiency">Motivation: Overall Efficiency</a></li>
-        
-            <li><a class="toctree-l4" href="#integer-vs-fp32">Integer vs. FP32</a></li>
-        
-            <li><a class="toctree-l4" href="#conservative-quantization-int8">"Conservative" Quantization: INT8</a></li>
-        
-            <li><a class="toctree-l4" href="#aggressive-quantization-int4-and-lower">"Aggressive" Quantization: INT4 and Lower</a></li>
-        
-            <li><a class="toctree-l4" href="#quantization-aware-training">Quantization-Aware Training</a></li>
-        
-            <li><a class="toctree-l4" href="#references">References</a></li>
-        
+    <li class="toctree-l3"><a class="reference internal" href="#avoiding-overflows">Avoiding Overflows</a>
+    </li>
         </ul>
-    
-
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="knowledge_distillation.html">Knowledge Distillation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="conditional_computation.html">Conditional Computation</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Algorithms</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="algo_pruning.html">Pruning</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="algo_quantization.html">Quantization</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="algo_earlyexit.html">Early Exit</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="model_zoo.html">Model Zoo</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="jupyter.html">Jupyter Notebooks</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="design.html">Design</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Tutorials</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="tutorial-struct_pruning.html">Pruning Filters and Channels</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="tutorial-lang_model.html">Pruning a Language Model</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="tutorial-lang_model_quant.html">Quantizing a Language Model</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="tutorial-gnmt_quant.html">Quantizing GNMT</a>
-                </li>
-    </ul>
-	    </li>
-          
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conservative-quantization-int8">"Conservative" Quantization: INT8</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#aggressive-quantization-int4-and-lower">"Aggressive" Quantization: INT4 and Lower</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quantization-aware-training">Quantization-Aware Training</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#straight-through-estimator">Straight-Through Estimator</a>
+    </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#references">References</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="knowledge_distillation.html">Knowledge Distillation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="conditional_computation.html">Conditional Computation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithms</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="algo_pruning.html">Pruning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="algo_quantization.html">Quantization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="algo_earlyexit.html">Early Exit</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="model_zoo.html">Model Zoo</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter Notebooks</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="design.html">Design</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="tutorial-struct_pruning.html">Pruning Filters and Channels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tutorial-lang_model.html">Pruning a Language Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tutorial-lang_model_quant.html">Quantizing a Language Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tutorial-gnmt_quant.html">Quantizing GNMT</a>
+                  </li>
+              </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Neural Network Distiller</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Neural Network Distiller</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-    
-      
-        
-          <li>Compressing Models &raquo;</li>
-        
-      
-    
-    <li>Quantization</li>
+    <li><a href="index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Compressing Models</li>
+      <li class="breadcrumb-item active">Quantization</li>
     <li class="wy-breadcrumbs-aside">
-      
     </li>
   </ul>
   <hr/>
 </div>
-          <div role="main">
-            <div class="section">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
                 <h1 id="quantization">Quantization</h1>
 <p>Quantization refers to the process of reducing the number of bits that represent a number. In the context of deep learning, the predominant numerical format used for research and for deployment has so far been 32-bit floating point, or FP32. However, the desire for reduced bandwidth and compute requirements of deep learning models has driven research into using lower-precision numerical formats. It has been extensively demonstrated that weights and activations can be represented using 8-bit integers (or INT8) without incurring significant loss in accuracy. The use of even lower bit-widths, such as 4/2/1-bits, is an active field of research that has also shown great progress.</p>
@@ -263,7 +198,6 @@ As mentioned above, a scale factor is used to adapt the dynamic range of the ten
 <li><strong>Online</strong> means calculating the min/max values for each tensor dynamically during runtime. In this method clipping cannot occur, however the added computation resources required to calculate the min/max values at runtime might be prohibitive.</li>
 </ul>
 <div id="outliers-removal"></div>
-
 <p>It is important to note, however, that the full float range of an activations tensor usually includes elements which are statistically outliers. These values can be discarded by using a narrower min/max range, effectively allowing some clipping to occur in favor of increasing the resolution provided to the part of the distribution containing most of the information. A simple method which can yield nice results is to simply use an average of the observed min/max values instead of the actual values. Alternatively, statistical measures can be used to intelligently select where to clip the original range in order to preserve as much information as possible (<a href="#migacz-2017">Migacz, 2017</a>). Going further, <a href="#banner-et-al-2018">Banner et al., 2018</a> have proposed a method for analytically computing the clipping value under certain conditions.</p>
 <p>Another possible optimization point is <strong>scale-factor scope</strong>. The most common way is use a single scale-factor per-layer, but it is also possible to calculate a scale-factor per-channel. This can be beneficial if the weight distributions vary greatly between channels.</p>
 <p>When used to directly quantize a model without re-training, as described so far, this method is commonly referred to as <strong>post-training quantization</strong>. However, recent publications have shown that there are cases where post-training quantization to INT8 doesn't preserve accuracy (<a href="#benoit-et-al-2018">Benoit et al., 2018</a>, <a href="#krishnamoorthi-2018">Krishnamoorthi, 2018</a>). Namely, smaller models such as MobileNet seem to not respond as well to post-training quantization, presumabley due to their smaller representational capacity. In such cases, <a href="#quantization-aware-training">quantization-aware training</a> is used.</p>
@@ -286,84 +220,59 @@ In the diagram we show "layer N" as the conv + batch-norm + activation combinati
 <h3 id="straight-through-estimator">Straight-Through Estimator</h3>
 <p>An important question in this context is how to back-propagate through the quantization functions. These functions are discrete-valued, hence their derivative is 0 almost everywhere. So, using their gradients as-is would severely hinder the learning process. An approximation commonly used to overcome this issue is the "straight-through estimator" (STE) (<a href="#hinton-et-al-2012">Hinton et al., 2012</a>, <a href="#bengio-et-al-2013">Bengio, 2013</a>), which simply passes the gradient through these functions as-is.  </p>
 <h2 id="references">References</h2>
-<p><div id="dally-2015"></div>
-<strong>William Dally</strong>. High-Performance Hardware for Machine Learning. <a href="https://media.nips.cc/Conferences/2015/tutorialslides/Dally-NIPS-Tutorial-2015.pdf">Tutorial, NIPS, 2015</a></p>
+<div id="dally-2015"></div>
+<p><strong>William Dally</strong>. High-Performance Hardware for Machine Learning. <a href="https://media.nips.cc/Conferences/2015/tutorialslides/Dally-NIPS-Tutorial-2015.pdf">Tutorial, NIPS, 2015</a></p>
 <div id="rastegari-et-al-2016"></div>
-
 <p><strong>Mohammad Rastegari, Vicente Ordone, Joseph Redmon and Ali Farhadi</strong>. XNOR-Net: ImageNet Classification Using Binary Convolutional Neural Networks. <a href="https://link.springer.com/chapter/10.1007%2F978-3-319-46493-0_32">ECCV, 2016</a></p>
 <div id="courbariaux-et-al-2014"></div>
-
 <p><strong>Matthieu Courbariaux, Yoshua Bengio and Jean-Pierre David</strong>. Training deep neural networks with low precision multiplications. <a href="https://arxiv.org/abs/1412.7024">arxiv:1412.7024</a></p>
 <div id="gysel-et-al-2018"></div>
-
 <p><strong>Philipp Gysel, Jon Pimentel, Mohammad Motamedi and Soheil Ghiasi</strong>. Ristretto: A Framework for Empirical Study of Resource-Efficient Inference in Convolutional Neural Networks. <a href="http://ieeexplore.ieee.org/document/8318896/">IEEE Transactions on Neural Networks and Learning Systems, 2018</a></p>
 <div id="migacz-2017"></div>
-
 <p><strong>Szymon Migacz</strong>. 8-bit Inference with TensorRT. <a href="http://on-demand.gputechconf.com/gtc/2017/presentation/s7310-8-bit-inference-with-tensorrt.pdf">GTC San Jose, 2017</a></p>
 <div id="zhou-et-al-2016"></div>
-
 <p><strong>Shuchang Zhou, Zekun Ni, Xinyu Zhou, He Wen, Yuxin Wu and Yuheng Zou</strong>. DoReFa-Net: Training Low Bitwidth Convolutional Neural Networks with Low Bitwidth Gradients. <a href="https://arxiv.org/abs/1606.06160">arxiv:1606.06160</a></p>
 <div id="zhou-et-al-2017"></div>
-
 <p><strong>Aojun Zhou, Anbang Yao, Yiwen Guo, Lin Xu and Yurong Chen</strong>. Incremental Network Quantization: Towards Lossless CNNs with Low-precision Weights. <a href="https://arxiv.org/abs/1702.03044">ICLR, 2017</a></p>
 <div id="mishra-et-al-2018"></div>
-
 <p><strong>Asit Mishra, Eriko Nurvitadhi, Jeffrey J Cook and Debbie Marr</strong>. WRPN: Wide Reduced-Precision Networks. <a href="https://openreview.net/forum?id=B1ZvaaeAZ">ICLR, 2018</a></p>
 <div id="choi-et-al-2018"></div>
-
 <p><strong>Jungwook Choi, Zhuo Wang, Swagath Venkataramani, Pierce I-Jen Chuang, Vijayalakshmi Srinivasan and Kailash Gopalakrishnan</strong>. PACT: Parameterized Clipping Activation for Quantized Neural Networks. <a href="https://arxiv.org/abs/1805.06085">arxiv:1805.06085</a></p>
 <div id="lin-et-al-2017"></div>
-
 <p><strong>Xiaofan Lin, Cong Zhao and Wei Pan</strong>. Towards Accurate Binary Convolutional Neural Network. <a href="http://papers.nips.cc/paper/6638-towards-accurate-binary-convolutional-neural-network">NIPS, 2017</a></p>
 <div id="han-et-al-2015"></div>
-
 <p><strong>Song Han, Jeff Pool, John Tran and William Dally</strong>. Learning both Weights and Connections for Efficient Neural Network. <a href="http://papers.nips.cc/paper/5784-learning-both-weights-and-connections-for-efficient-neural-network">NIPS, 2015</a></p>
 <div id="li-et-al-2016"></div>
-
 <p><strong>Fengfu Li, Bo Zhang and Bin Liu</strong>. Ternary Weight Networks. <a href="https://arxiv.org/abs/1605.04711">arxiv:1605.04711</a></p>
 <div id="zhu-et-al-2016"></div>
-
 <p><strong>Chenzhuo Zhu, Song Han, Huizi Mao and William J. Dally</strong>. Trained Ternary Quantization. <a href="https://arxiv.org/abs/1612.01064">arxiv:1612.01064</a></p>
 <div id="bengio-et-al-2013"></div>
-
 <p><strong>Yoshua Bengio, Nicholas Leonard and Aaron Courville</strong>. Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation. <a href="https://arxiv.org/abs/1308.3432">arxiv:1308.3432</a></p>
 <div id="hinton-et-al-2012"></div>
-
 <p><strong>Geoffrey Hinton, Nitish Srivastava, Kevin Swersky, Tijmen Tieleman and Abdelrahman Mohamed</strong>. Neural Networks for Machine Learning. <a href="https://www.coursera.org/learn/neural-networks">Coursera, video lectures, 2012</a></p>
 <div id="benoit-et-al-2018"></div>
-
 <p><strong>Benoit Jacob, Skirmantas Kligys, Bo Chen, Menglong Zhu, Matthew Tang, Andrew Howard, Hartwig Adam and Dmitry Kalenichenko</strong>. Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference. <a href="http://openaccess.thecvf.com/content_cvpr_2018/html/Jacob_Quantization_and_Training_CVPR_2018_paper.html">ECCV, 2018</a></p>
 <div id="krishnamoorthi-2018"></div>
-
 <p><strong>Raghuraman Krishnamoorthi</strong>. Quantizing deep convolutional networks for efficient inference: A whitepaper <a href="https://arxiv.org/abs/1806.08342">arxiv:1806.08342</a></p>
 <div id="banner-et-al-2018"></div>
-
 <p><strong>Ron Banner, Yury Nahshan, Elad Hoffer and Daniel Soudry</strong>. ACIQ: Analytical Clipping for Integer Quantization of neural networks <a href="https://arxiv.org/abs/1810.05723">arxiv:1810.05723</a></p>
               
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="regularization.html" class="btn btn-neutral float-left" title="Regularization"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="knowledge_distillation.html" class="btn btn-neutral float-right" title="Knowledge Distillation">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="regularization.html" class="btn btn-neutral" title="Regularization"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+          
         </div>
       </div>
 
@@ -371,21 +280,28 @@ In the diagram we show "layer N" as the conv + batch-norm + activation combinati
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="regularization.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="knowledge_distillation.html" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="regularization.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="knowledge_distillation.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
-    <script>var base_url = '.';</script>
-    <script src="js/theme.js" defer></script>
-      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
-      <script src="search/main.js" defer></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
 
 </body>
 </html>

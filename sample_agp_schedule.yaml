@@ -1,0 +1,21 @@
+# Simple AGP Pruning Schedule for CIFAR-10
+version: 1
+
+pruners:
+  my_pruner:
+    class: 'AutomatedGradualPruner'
+    initial_sparsity: 0.05
+    final_sparsity: 0.50
+    weights: ['module.conv1.weight', 'module.layer1.0.conv1.weight', 'module.layer1.0.conv2.weight']
+
+policies:
+  - pruner:
+      instance_name: my_pruner
+    starting_epoch: 0
+    ending_epoch: 30
+    frequency: 2
+
+lr_schedulers:
+  - class: StepLR
+    step_size: 30
+    gamma: 0.1

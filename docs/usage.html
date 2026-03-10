@@ -1,226 +1,156 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Usage - Neural Network Distiller</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  <link href="extra.css" rel="stylesheet">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Usage";
-    var mkdocs_page_input_path = "usage.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Usage - Neural Network Distiller</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Usage";
+        var mkdocs_page_input_path = "usage.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="index.html" class="icon icon-home"> Neural Network Distiller</a>
-        <div role="search">
+          <a href="index.html" class="icon icon-home"> Neural Network Distiller
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="index.html">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="install.html">Installation</a>
-	    </li>
-          
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="usage.html">Usage</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#using-the-sample-application">Using the sample application</a></li>
-    
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Usage</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#command-line-arguments">Command line arguments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#experiment-reproducibility">Experiment reproducibility</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#performing-pruning-sensitivity-analysis">Performing pruning sensitivity analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#post-training-quantization">Post-Training Quantization</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summaries">Summaries</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-tensorboard">Using TensorBoard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#collecting-activations-statistics">Collecting activations statistics</a>
         <ul>
-        
-            <li><a class="toctree-l3" href="#command-line-arguments">Command line arguments</a></li>
-        
-            <li><a class="toctree-l3" href="#examples">Examples</a></li>
-        
-            <li><a class="toctree-l3" href="#experiment-reproducibility">Experiment reproducibility</a></li>
-        
-            <li><a class="toctree-l3" href="#performing-pruning-sensitivity-analysis">Performing pruning sensitivity analysis</a></li>
-        
-            <li><a class="toctree-l3" href="#post-training-quantization">Post-Training Quantization</a></li>
-        
-            <li><a class="toctree-l3" href="#summaries">Summaries</a></li>
-        
-            <li><a class="toctree-l3" href="#using-tensorboard">Using TensorBoard</a></li>
-        
-            <li><a class="toctree-l3" href="#collecting-activations-statistics">Collecting activations statistics</a></li>
-        
+    <li class="toctree-l3"><a class="reference internal" href="#collectors-and-their-collaterals">Collectors and their collaterals</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#caveats">Caveats</a>
+    </li>
         </ul>
-    
-
-    <li class="toctree-l2"><a href="#using-the-jupyter-notebooks">Using the Jupyter notebooks</a></li>
-    
-
-    <li class="toctree-l2"><a href="#generating-this-documentation">Generating this documentation</a></li>
-    
-
+    </li>
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="schedule.html">Compression Scheduling</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="prepare_model_quant.html">Preparing a Model for Quantization</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Compressing Models</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="pruning.html">Pruning</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="regularization.html">Regularization</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="schedule.html">Compression Scheduling</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="quantization.html">Quantization</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="prepare_model_quant.html">Preparing a Model for Quantization</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="knowledge_distillation.html">Knowledge Distillation</a>
+              </ul>
+              <p class="caption"><span class="caption-text">Compressing Models</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="pruning.html">Pruning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="regularization.html">Regularization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="quantization.html">Quantization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="knowledge_distillation.html">Knowledge Distillation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="conditional_computation.html">Conditional Computation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithms</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="algo_pruning.html">Pruning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="algo_quantization.html">Quantization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="algo_earlyexit.html">Early Exit</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="model_zoo.html">Model Zoo</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="conditional_computation.html">Conditional Computation</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter Notebooks</a>
                 </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Algorithms</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="algo_pruning.html">Pruning</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="design.html">Design</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="algo_quantization.html">Quantization</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="algo_earlyexit.html">Early Exit</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="model_zoo.html">Model Zoo</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="jupyter.html">Jupyter Notebooks</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="design.html">Design</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Tutorials</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="tutorial-struct_pruning.html">Pruning Filters and Channels</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="tutorial-lang_model.html">Pruning a Language Model</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="tutorial-lang_model_quant.html">Quantizing a Language Model</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="tutorial-gnmt_quant.html">Quantizing GNMT</a>
-                </li>
-    </ul>
-	    </li>
-          
-        </ul>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="tutorial-struct_pruning.html">Pruning Filters and Channels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tutorial-lang_model.html">Pruning a Language Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tutorial-lang_model_quant.html">Quantizing a Language Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tutorial-gnmt_quant.html">Quantizing GNMT</a>
+                  </li>
+              </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Neural Network Distiller</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Neural Network Distiller</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Usage</li>
+    <li><a href="index.html" class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Usage</li>
     <li class="wy-breadcrumbs-aside">
-      
     </li>
   </ul>
   <hr/>
 </div>
-          <div role="main">
-            <div class="section">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
                 <h1 id="using-the-sample-application">Using the sample application</h1>
 <p>The Distiller repository contains a sample application, <code>distiller/examples/classifier_compression/compress_classifier.py</code>, and a set of scheduling files which demonstrate Distiller's features.  Following is a brief discussion of how to use this application and the accompanying schedules.</p>
@@ -230,13 +160,13 @@
 <li>An in-depth <a href="https://intellabs.github.io/distiller/model_zoo.html">discussion</a> of how we used these schedule files to implement several state-of-the-art DNN compression research papers.</li>
 </ul>
 <p>The sample application supports various features for compression of image classification DNNs, and gives an example of how to integrate distiller in your own application.  The code is documented and should be considered the best source of documentation, but we provide some elaboration here.</p>
-<p>This diagram shows how where <code>compress_classifier.py</code> fits in the compression workflow, and how we integrate the Jupyter notebooks as part of our research work.
-<center><img alt="Using Distiller" src="imgs/use-flow.png" /></center><br></p>
+<p>This diagram shows how where <code>compress_classifier.py</code> fits in the compression workflow, and how we integrate the Jupyter notebooks as part of our research work.</p>
+<center>![Using Distiller](imgs/use-flow.png)</center>
+<p><br></p>
 <h2 id="command-line-arguments">Command line arguments</h2>
 <p>To get help on the command line arguments, invoke:</p>
 <pre><code>$ python3 compress_classifier.py --help
 </code></pre>
-
 <p>For example:</p>
 <pre><code>$ time python3 compress_classifier.py -a alexnet --lr 0.005 -p 50 ../../../data.imagenet -j 44 --epochs 90 --pretrained --compress=../sensitivity-pruning/alexnet.schedule_sensitivity.yaml
 
@@ -278,11 +208,9 @@ Parameters:
  2018-04-04 21:31:58,732 - Test: [  150/  195]    Loss 1.833214    Top1 57.619792    Top5 80.447917
  2018-04-04 21:32:01,274 - ==&gt; Top1: 56.606    Top5: 79.446    Loss: 1.893
 </code></pre>
-
 <p>Let's look at the command line again:</p>
 <pre><code>$ time python3 compress_classifier.py -a alexnet --lr 0.005 -p 50 ../../../data.imagenet -j 44 --epochs 90 --pretrained --compress=../sensitivity-pruning/alexnet.schedule_sensitivity.yaml
 </code></pre>
-
 <p>In this example, we prune a TorchVision pre-trained AlexNet network, using the following configuration:</p>
 <ul>
 <li>Learning-rate of 0.005</li>
@@ -362,14 +290,12 @@ Results are output as a CSV file (<code>sensitivity.csv</code>) and PNG file (<c
 <p>The example below performs element-wise pruning sensitivity analysis on ResNet20 for CIFAR10:</p>
 <pre><code>$ python3 compress_classifier.py -a resnet20_cifar ../../../data.cifar10/ -j=1 --resume=../cifar10/resnet20/checkpoint_trained_dense.pth.tar --sense=element
 </code></pre>
-
 <p>The <code>sense</code> command-line argument can be set to either <code>element</code> or <code>filter</code>, depending on the type of analysis you want done.<br></p>
 <p>There is also a <a href="https://github.com/IntelLabs/distiller/blob/master/jupyter/sensitivity_analysis.ipynb">Jupyter notebook</a> with example invocations, outputs and explanations.</p>
 <h2 id="post-training-quantization">Post-Training Quantization</h2>
 <p>The following example qunatizes ResNet18 for ImageNet:</p>
-<pre><code class="bash">$ python3 compress_classifier.py -a resnet18 ../../../data.imagenet  --pretrained --quantize-eval --evaluate
+<pre><code class="language-bash">$ python3 compress_classifier.py -a resnet18 ../../../data.imagenet  --pretrained --quantize-eval --evaluate
 </code></pre>
-
 <p>See <a href="schedule.html#post-training-quantization">here</a> for more details on how to invoke post-training quantization from the command line.</p>
 <p>A checkpoint with the quantized model will be dumped in the run directory. It will contain the quantized model parameters (the data type will still be FP32, but the values will be integers). The calculated quantization parameters (scale and zero-point) are stored as well in each quantized layer.</p>
 <p>For more examples of post-training quantization see <a href="https://github.com/IntelLabs/distiller/blob/master/examples/quantization/post_train_quant">here</a>.</p>
@@ -379,7 +305,6 @@ You can log sparsity statistics (written to console and CSV file), performance, 
 Creating a PNG image is an experimental feature (it relies on features which are not available on PyTorch 3.1 and that we hope will be available in PyTorch's next release), so to use it you will need to compile the PyTorch master branch, and hope for the best ;-).</p>
 <pre><code>$ python3 compress_classifier.py --resume=../ssl/checkpoints/checkpoint_trained_ch_regularized_dense.pth.tar -a=resnet20_cifar ../../../data.cifar10 --summary=compute
 </code></pre>
-
 <p>Generates:</p>
 <pre><code>+----+------------------------------+--------+----------+-----------------+--------------+-----------------+--------------+------------------+---------+
 |    | Name                         | Type   | Attrs    | IFM             |   IFM volume | OFM             |   OFM volume |   Weights volume |    MACs |
@@ -409,13 +334,11 @@ Creating a PNG image is an experimental feature (it relies on features which are
 +----+------------------------------+--------+----------+-----------------+--------------+-----------------+--------------+------------------+---------+
 Total MACs: 40,813,184
 </code></pre>
-
 <h2 id="using-tensorboard">Using TensorBoard</h2>
 <p>Google's <a href="https://github.com/tensorflow/tensorboard">TensorBoard</a> is an excellent tool for visualizing the progress of DNN training.  Distiller's logger supports writing performance indicators and parameter statistics in a file format that can be read by TensorBoard (Distiller uses TensorFlow's APIs in order to do this, which is why Distiller requires the installation of TensorFlow).<br>
 To view the graphs, invoke the TensorBoard server.  For example:</p>
 <pre><code>$ tensorboard --logdir=logs
 </code></pre>
-
 <p>Distillers's setup (requirements.txt) installs TensorFlow for CPU. If you want a different installation, please follow the <a href="https://www.tensorflow.org/install/install_linux">TensorFlow installation instructions</a>.</p>
 <h2 id="collecting-activations-statistics">Collecting activations statistics</h2>
 <p>In CNNs with ReLU layers, ReLU activations (feature-maps) also exhibit a nice level of sparsity (50-60% sparsity is typical). <br>
@@ -423,7 +346,6 @@ You can collect activation statistics using the <code>--act_stats</code> command
 For example:</p>
 <pre><code>$ python3 compress_classifier.py -a=resnet56_cifar -p=50 ../../../data.cifar10  --resume=checkpoint.resnet56_cifar_baseline.pth.tar --act-stats=test -e
 </code></pre>
-
 <p>The <code>test</code> parameter indicates that, in this example, we want to collect activation statistics during the <em>test</em> phase.  Note that we also used the <code>-e</code> command-line argument to indicate that we want to run a <em>test</em> phase. The other two legal parameter values are <code>train</code> and <code>valid</code> which collect activation statistics during the <em>training</em> and <em>validation</em> phases, respectively.  </p>
 <h3 id="collectors-and-their-collaterals">Collectors and their collaterals</h3>
 <p>An instance of a subclass of <code>ActivationStatsCollector</code> can be used to collect activation statistics.  Currently, <code>ActivationStatsCollector</code> has two types of subclasses: <code>SummaryActivationStatsCollector</code> and <code>RecordsActivationStatsCollector</code>.<br>
@@ -434,13 +356,11 @@ In the sample compression application, <code>compress_classifier.py</code>, we c
                                 &quot;sparsity&quot;,
                                 lambda t: 100 * distiller.utils.sparsity(t))
 </code></pre>
-
 <p>The lambda expression is invoked per activation encountered during forward passes, and the value it returns (in this case, the sparsity of the activation tensors, multiplied by 100) is stored in <code>module.sparsity</code> (<em>"sparsity"</em> is this collector's name).  To access the statistics, you can invoke <code>collector.value()</code>, or you can access each module's data directly.</p>
 <p>Another type of collector is <code>RecordsActivationStatsCollector</code> which computes a hard-coded set of activations statistics and collects a
 <em>record per activation</em>.  For obvious reasons, this is slower than instances of <code>SummaryActivationStatsCollector</code>.<br><code>ActivationStatsCollector</code> default to collecting activations statistics only on the output activations of ReLU layers, but we can choose any layer type we want.  In the example below we collect statistics from outputs of <code>torch.nn.Conv2d</code> layers.</p>
 <pre><code>RecordsActivationStatsCollector(model, classes=[torch.nn.Conv2d])
 </code></pre>
-
 <p>Collectors can write their data to Excel workbooks (which are named using the collector's name), by invoking <code>collector.to_xlsx(path_to_workbook)</code>.  In <code>compress_classifier.py</code> we currently create four different collectors which you can selectively disable.  You can also add other statistics collectors and use a different function to compute your new statistic.</p>
 <pre><code>collectors = missingdict({
     &quot;sparsity&quot;:      SummaryActivationStatsCollector(model, &quot;sparsity&quot;,
@@ -451,18 +371,15 @@ In the sample compression application, <code>compress_classifier.py</code>, we c
                                                      distiller.utils.activation_channels_apoz),
     &quot;records&quot;:       RecordsActivationStatsCollector(model, classes=[torch.nn.Conv2d])})
 </code></pre>
-
 <p>By default, these Collectors write their data to files in the active log directory.</p>
 <p>You can use a utility function, <code>distiller.log_activation_statsitics</code>, to log the data of an <code>ActivationStatsCollector</code> instance to one of the backend-loggers.  For an example, the code below logs the <em>"sparsity"</em> collector to a TensorBoard log file.</p>
 <pre><code>distiller.log_activation_statsitics(epoch, &quot;train&quot;, loggers=[tflogger],
                                     collector=collectors[&quot;sparsity&quot;])
 </code></pre>
-
 <h3 id="caveats">Caveats</h3>
 <p>Distiller collects activations statistics using PyTorch's forward-hooks mechanism.  Collectors iteratively register the modules' forward-hooks, and collectors are called during the forward traversal and get exposed to activation data.  Registering for forward callbacks is performed like this:</p>
 <pre><code>module.register_forward_hook
 </code></pre>
-
 <p>This makes apparent two limitations of this mechanism:</p>
 <ol>
 <li>We can only register on PyTorch modules.  This means that we can't register on the forward hook of a functionals such as <code>torch.nn.functional.relu</code> and <code>torch.nn.functional.max_pool2d</code>.<br />
@@ -477,7 +394,6 @@ In the sample compression application, <code>compress_classifier.py</code>, we c
         x = F.relu(self.conv1(x))
         return x
 </code></pre>
-
 <p>Can be changed to:  </p>
 <pre><code>class MadeUpNet(nn.Module):
     def __init__(self):
@@ -489,7 +405,6 @@ In the sample compression application, <code>compress_classifier.py</code>, we c
         x = self.relu(self.conv1(x))
         return x
 </code></pre>
-
 <ol>
 <li>We can only use a module instance once in our models.  If we use the same module several times, then we can't determine which node in the graph has invoked the callback, because the PyTorch callback signature <code>def hook(module, input, output)</code> doesn't provide enough contextual information.<br />
 TorchVision's <a href="https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py">ResNet</a> is an example of a model that uses the same instance of nn.ReLU multiple times:  </li>
@@ -519,7 +434,6 @@ TorchVision's <a href="https://github.com/pytorch/vision/blob/master/torchvision
         out = self.relu(out)                    # &lt;================
         return out
 </code></pre>
-
 <p>In Distiller we changed <a href="https://github.com/IntelLabs/distiller/blob/master/distiller/models/imagenet/resnet.py">ResNet</a> to use multiple instances of nn.ReLU, and each instance is used only once:  </p>
 <pre><code>class BasicBlock(nn.Module):
     expansion = 1
@@ -547,46 +461,35 @@ TorchVision's <a href="https://github.com/pytorch/vision/blob/master/torchvision
         out = self.relu2(out)                   # &lt;================
         return out
 </code></pre>
-
 <h1 id="using-the-jupyter-notebooks">Using the Jupyter notebooks</h1>
 <p>The Jupyter notebooks contain many examples of how to use the statistics summaries generated by Distiller.  They are explained in a separate page.</p>
 <h1 id="generating-this-documentation">Generating this documentation</h1>
 <p>Install mkdocs and the required packages by executing:</p>
 <pre><code>$ pip3 install -r doc-requirements.txt
 </code></pre>
-
 <p>To build the project documentation run:</p>
 <pre><code>$ cd distiller/docs-src
 $ mkdocs build --clean
 </code></pre>
-
 <p>This will create a folder named 'site' which contains the documentation website.
 Open distiller/docs/site/index.html to view the documentation home page.</p>
               
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="install.html" class="btn btn-neutral float-left" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="schedule.html" class="btn btn-neutral float-right" title="Compression Scheduling">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="install.html" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+          
         </div>
       </div>
 
@@ -594,21 +497,28 @@ Open distiller/docs/site/index.html to view the documentation home page.</p>
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="install.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="schedule.html" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="install.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="schedule.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
-    <script>var base_url = '.';</script>
-    <script src="js/theme.js" defer></script>
-      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
-      <script src="search/main.js" defer></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
 
 </body>
 </html>
