@@ -12,6 +12,7 @@ with open('requirements.txt','r') as req_file:
 setup(name='distiller',
       version='0.4.0-pre',
       packages=packages,
-      install_requires=install_reqs
+      install_requires=install_reqs,
+      python_requires='>=3.5'
       )
 
